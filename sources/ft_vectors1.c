@@ -6,13 +6,13 @@
 /*   By: fanno <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 14:14:37 by fanno             #+#    #+#             */
-/*   Updated: 2016/11/16 11:50:05 by fanno            ###   ########.fr       */
+/*   Updated: 2016/11/24 16:36:25 by fanno            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/RTv1.h"
 
-t_vector	vector_add(t_vector	v1, t_vector v2)
+t_point			vector_add(t_point v1, t_point v2)
 {
 	v1.x = v1.x + v2.x;
 	v1.y = v1.y + v2.y;
@@ -20,7 +20,7 @@ t_vector	vector_add(t_vector	v1, t_vector v2)
 	return (v1);
 }
 
-t_vector	vector_sub(t_vector v1, t_vector v2)
+t_point			vector_sub(t_point v1, t_point v2)
 {
 	v1.x = v1.x - v2.x;
 	v1.y = v1.y - v2.y;
@@ -28,7 +28,7 @@ t_vector	vector_sub(t_vector v1, t_vector v2)
 	return (v1);
 }
 
-t_vector	vector_div(t_vector v1, t_vector v2)
+t_point			vector_div(t_point v1, t_point v2)
 {
 	v1.x = v1.x / v2.x;
 	v1.y = v1.y / v2.y;
@@ -36,7 +36,7 @@ t_vector	vector_div(t_vector v1, t_vector v2)
 	return (v1);
 }
 
-t_vector	vector_mul(t_vector v1, t_vector v2)
+t_point			vector_mul(t_point v1, t_point v2)
 {
 	v1.x = v1.x / v2.x;
 	v1.y = v1.y / v2.y;
@@ -44,12 +44,13 @@ t_vector	vector_mul(t_vector v1, t_vector v2)
 	return (v1);
 }
 
-void		vector_nor(t_vector *v)
+static t_point		vector_nor(t_point *v)
 {
-	double		size;
+	float		normal;
 
-	size = sqrt(((v->x) * (v->x)) + ((v->y) * (v->y)) + ((v->z) * (v->z)));
+	size = sqrt(pow(v.x, 2) + pow(v.y, 2) + pow(v.z, 2));
 	v->x /= size;
 	v->y /= size;
 	v->z /= size;
+	return (normal);
 }

@@ -6,7 +6,7 @@
 /*   By: fanno <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 11:48:39 by fanno             #+#    #+#             */
-/*   Updated: 2016/11/20 12:54:04 by fanno            ###   ########.fr       */
+/*   Updated: 2016/11/22 10:49:22 by fanno            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int		escape(int key, void *e)
 int		destroy(int key, void *e)
 {
 	if (key || e)
-		break;
+		break ;
 	exit(0);
 	return (0);
 }

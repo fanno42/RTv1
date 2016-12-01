@@ -1,0 +1,76 @@
+camera {
+	origin {
+		200.0
+		-200.0
+		-200.0
+	rotation {
+		0.1
+		0.1
+		0.1
+	focal {
+		0.1
+	distance {
+		200.0
+}
+object {
+	brightness {
+		0.0
+	color {
+		0.0
+		0.0
+		0.0
+	plan {
+		coord {
+			0.0
+			0.0
+			1.0
+			400.0
+}
+
+object {
+	brightness {
+		0.0
+	color {
+		0.0
+		0.0
+		0.0
+	sphere {
+		coord {
+			0.0
+			0.0
+			0.0
+		radius {
+			0.0
+}
+
+object {
+	brightness {
+		0.0
+	color {
+		0.0
+		0.0
+		0.0
+	cylinder {
+		coord {
+			0.0
+			0.0
+			0.0
+		radius {
+			0.0
+}
+
+object {
+	brightness {
+		0.0
+	color {
+		0.0
+		0.0
+		0.0
+	cone {
+		coord {
+			0.0
+			0.0
+			0.0
+		radius {
+			0.0
+}
